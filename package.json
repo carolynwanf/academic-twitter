@@ -6,7 +6,10 @@
     "node": "16.x"
   },
   "main": "scroll.js",
-  
+  "scripts": {
+    "test": "node server/server.js",
+    "start":  "node server/server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carolynwanf/academic-twitter.git"
