@@ -1,0 +1,23 @@
+{
+  "name": "academic-twitter-1",
+  "version": "1.0.0",
+  "description": "Carolyn Wang's final project for FOLKMYTH 150",
+  "engines": {
+    "node": "16.x"
+  },
+  "main": "scroll.js",
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolynwanf/academic-twitter.git"
+  },
+  "author": "Carolyn Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carolynwanf/academic-twitter/issues"
+  },
+  "homepage": "https://github.com/carolynwanf/academic-twitter#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
