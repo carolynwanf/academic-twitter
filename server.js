@@ -13,7 +13,8 @@ var port = process.env.PORT || 5000;
 var server = app.listen(port, function () {
   console.log("Node app is running on port", port);
 });
-app.use(express.static("build"));
+app.use(express.static(__dirname + "/build"));
+// express.static(__dirname + "/build");
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "build", "index.html"))
 );
