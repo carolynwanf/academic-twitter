@@ -6,16 +6,21 @@
 // tell app to use statics
 // send '/' to index.html
 // routing
-var path = require('path');
-var express = require('express');
+var path = require("path");
+var express = require("express");
 var app = express();
-var port = process.env.PORT || 5000
-var server = app.listen(port, function() {
-    console.log('Node app is running on port', port);
+var port = process.env.PORT || 5000;
+var server = app.listen(port, function () {
+  console.log("Node app is running on port", port);
 });
-app.use(express.static('build'));
-app.get('/', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
-app.get('/defaultsite', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
-app.get('/:page', (req, res) => {
-    console.log(req.params)
-    res.sendFile(path.resolve('build', `${req.params}/index.html`))});
+app.use(express.static("build"));
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "build", "index.html"))
+);
+app.get("/defaultsite", (req, res) =>
+  res.sendFile(path.join(__dirname, "build", "index.html"))
+);
+app.get("/:page", (req, res) => {
+  console.log(req.params);
+  res.sendFile(path.join(__dirname, "build", `${req.params}/index.html`));
+});
